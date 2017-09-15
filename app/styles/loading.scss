@@ -1,0 +1,190 @@
+/* 引入动画 */
+
+@import './animations/loading.scss';
+
+/* 引入动画 end */
+
+.page__loading {
+    margin: 20px;
+    padding: 0;
+    .loadingItem {
+        float: left;
+        margin: 10px;
+        width: 140px;
+        &>div {
+            margin: 0 auto;
+        }
+    }
+    .battery {
+        border: 1px solid #333;
+        height: 20px;
+        position: relative;
+        width: 60px;
+        &:after {
+            background-color: #333;
+            border: 1px solid #333;
+            content: ' ';
+            display: block;
+            height: 8px;
+            right: -6px;
+            position: absolute;
+            top: 5px;
+            width: 4px;
+        }
+        .battery--capacity {
+            background-color: #333;
+            height: 100%;
+            width: 100%;
+        }
+        .battery--electrode {
+            background-color: #333;
+            border: 1px solid #333;
+            height: 8px;
+            right: -5px;
+            position: absolute;
+            top: 5px;
+            width: 3px;
+        }
+    }
+    .location {
+        height: 30px;
+        position: relative;
+        width: 30px;
+        .location--icon {
+            border: 2px solid #333;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            width: 20px;
+            z-index: 1;
+        }
+        &:after {
+            background-color: #dfdfdf;
+            bottom: 1px;
+            content: '';
+            display: block;
+            height: 8px;
+            left: -3px;
+            position: absolute;
+            width: 26px;
+            z-index: 0;
+        }
+    }
+    .cube {
+        $size: 22px;
+        border: 1px solid #333;
+        height: $size;
+        position: relative;
+        width: $size;
+        .cube--loading {
+            background-color: #333;
+            height: 100%;
+            margin-top: 0;
+            width: 100%;
+            opacity: 1;
+        }
+        &:after {
+            $size: 5px;
+            background-color: #333;
+            content: '';
+            height: $size;
+            left: -7px;
+            position: absolute;
+            top: -7px;
+            width: $size;
+        }
+    }
+    .rectangle {
+        background-color: #333;
+        font-size: 0;
+        height: 20px;
+        overflow: visible;
+        position: relative;
+        width: 100px;
+    }
+    .rectangle--wrap {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100px;
+    }
+    .rectangle--wrap__rect {
+        background-color: #333;
+        display: inline-block;
+        height: 20px;
+        margin-right: 2px;
+        width: 8px;
+    }
+    div.rectangle {
+        margin: 0;
+    }
+    .progressBar {
+        background-color: #333;
+        font-size: 0;
+        height: 20px;
+        overflow: visible;
+        position: relative;
+        width: 100px;
+    }
+    .progressBar--wrap {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100px;
+    }
+    .progressBar--wrap__rect {
+        background-color: #333;
+        display: inline-block;
+        height: 20px;
+        margin-right: 2px;
+        width: 8px;
+    }
+    div.progressBar {
+        margin: 0;
+    }
+}
+
+.borderradius .page__loading {
+    .battery {
+        border-radius: 3px;
+    }
+    .location:after {
+        border-radius: 100%;
+    }
+    .location--icon {
+        border-radius: 10px 10px 10px 0;
+    }
+}
+
+.csstransforms .page__loading {
+    .location--icon {
+        transform: rotate(-45deg)
+    }
+}
+
+
+/* 经测试，css-animation只支持到IE9 */
+
+.cssanimations .page__loading {
+    .battery--capacity {
+        animation: battery--capacity__charging 5s infinite steps(100, end);
+    }
+    .location--icon {
+        animation: location--icon__beating 1s infinite;
+    }
+    .cube--loading {
+        animation: cube__loading 10s infinite;
+    }
+    .cube:after {
+        animation: cube--small__loading 2s infinite;
+    }
+    .rectangle {
+        animation: rectangle__loading 2s infinite;
+    }
+    .rectangle--wrap {
+        animation: rectangle--wrap__loading 2s infinite;
+    }
+    .progressBar {
+        animation: progressBar__loading 2s infinite;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>loading 动画</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body class="page__loading">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- 模拟电池充电 -->
+    <div class="loadingItem">
+        <div class="battery">
+            <div class="battery--capacity">
+            </div>
+            <!--[if IE]>
+        <div class="battery--electrode"></div>
+        <![endif]-->
+        </div>
+
+    </div>
+    <!-- 模拟电池充电 end -->
+
+    <!-- 定位图标跳动 -->
+    <div class="loadingItem">
+        <div class="location">
+            <div class="location--icon"></div>
+        </div>
+    </div>
+    <!-- 定位图标跳动 end -->
+
+    <!-- 方块加载 -->
+    <div class="loadingItem">
+        <div class="cube">
+            <div class="cube--loading"></div>
+            <div class="cube--loading__small"></div>
+        </div>
+    </div>
+    <!-- 方块加载 end -->
+
+    <!-- 矩形加载 -->
+    <div class="loadingItem">
+        <div class="rectangle">
+            <div class="rectangle--wrap">
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+                <span class="rectangle--wrap__rect"></span>
+            </div>
+
+        </div>
+    </div>
+    <!-- 矩形加载 end -->
+
+    <div class="loadingItem">
+        <div class="progressBar">
+            <div class="progressBar--wrap">
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+                <span class="progressBar--wrap__rect"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

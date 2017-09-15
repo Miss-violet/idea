@@ -1,0 +1,71 @@
+/**
+ * @description: loading页面需要的动画
+ */
+
+@keyframes battery--capacity__charging {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes location--icon__beating {
+    from,
+    to {
+        top: 0;
+    }
+    50% {
+        top: -4px;
+    }
+}
+
+@keyframes cube__loading {
+    from {
+        height: 0;
+        margin-top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes cube--small__loading {
+    0%,
+    100% {
+        left: -8px;
+        top: -8px;
+    }
+    25% {
+        left: 23px;
+        top: -8px;
+    }
+    50% {
+        left: 23px;
+        top: 23px;
+    }
+    75% {
+        left: -8px;
+        top: 23px;
+    }
+}
+
+@keyframes rectangle__loading {
+    to {
+        width: 0;
+    }
+}
+
+@keyframes rectangle--wrap__loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes progressBar__loading {
+    from {
+        width: 0;
+    }
+}
