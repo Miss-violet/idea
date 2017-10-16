@@ -8,7 +8,7 @@
     }
 }
 
-@keyframes location--icon__beating {
+@keyframes location__position {
     from,
     to {
         top: 0;
@@ -18,7 +18,7 @@
     }
 }
 
-@keyframes cube__loading {
+@keyframes cube {
     from {
         height: 0;
         margin-top: 100%;
@@ -26,9 +26,9 @@
     }
 }
 
-@keyframes cube--small__loading {
-    0%,
-    100% {
+@keyframes cube__position {
+    from,
+    to {
         left: -8px;
         top: -8px;
     }
@@ -46,26 +46,100 @@
     }
 }
 
-@keyframes rectangle__loading {
+@keyframes rectangle {
     to {
         width: 0;
     }
 }
 
-@keyframes rectangle--wrap__loading {
-    0% {
-        opacity: 1;
+@keyframes rectangle__loading {
+    from {
+        box-shadow: 2px 0 0 rgba(51, 51, 51, 0.9), 12px 0 0 rgba(51, 51, 51, 0.8), 22px 0 0 rgba(51, 51, 51, 0.7), 32px 0 0 rgba(51, 51, 51, 0.6), 42px 0 0 rgba(51, 51, 51, 0.5), 52px 0 0 rgba(51, 51, 51, 0.4), 62px 0 0 rgba(51, 51, 51, 0.3), 72px 0 0 rgba(51, 51, 51, 0.2), 82px 0 0 rgba(51, 51, 51, 0.1);
     }
     50% {
-        opacity: 0.5;
+        box-shadow: 2px 0 0 rgba(51, 51, 51, 0.3), 12px 0 0 rgba(51, 51, 51, 0.4), 22px 0 0 rgba(51, 51, 51, 0.3), 32px 0 0 rgba(51, 51, 51, 0.4), 42px 0 0 rgba(51, 51, 51, 0.5), 52px 0 0 rgba(51, 51, 51, 0.6), 62px 0 0 rgba(51, 51, 51, 0.7), 72px 0 0 rgba(51, 51, 51, 0.8), 82px 0 0 rgba(51, 51, 51, 0.9);
     }
-    100% {
+    to {
+        box-shadow: 2px 0 0 rgba(51, 51, 51, 0.5), 12px 0 0 rgba(51, 51, 51, 0.6), 22px 0 0 rgba(51, 51, 51, 0.7), 32px 0 0 rgba(51, 51, 51, 0.8), 42px 0 0 rgba(51, 51, 51, 0.9), 52px 0 0 rgba(51, 51, 51, 0.8), 62px 0 0 rgba(51, 51, 51, 0.7), 72px 0 0 rgba(51, 51, 51, 0.6), 82px 0 0 rgba(51, 51, 51, 0.5);
         opacity: 1;
     }
 }
 
-@keyframes progressBar__loading {
+@keyframes ball__transform {
     from {
-        width: 0;
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dashboard--hand {
+    from,
+    to {
+        transform: rotate(-60deg)
+    }
+    50% {
+        transform: rotate(60deg)
+    }
+}
+
+@keyframes circle__rotate {
+    from,
+    to {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle__size {
+    from,
+    to {
+        border-radius: 100%;
+        box-shadow: -10px 0 0 rgba(51, 51, 51, 1);
+        height: 6px;
+        width: 6px;
+    }
+    50% {
+        border-radius: 100%;
+        box-shadow: -14px 0 0 rgba(51, 51, 51, 1);
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@keyframes threeCircle {
+    from {
+        background-color: rgba(51, 51, 51, 0.6);
+        box-shadow: 10px 0 0 rgba(51, 51, 51, 1), 20px 0 0 rgba(51, 51, 51, 0.6);
+    }
+    25% {
+        background-color: rgba(51, 51, 51, 0.6);
+        box-shadow: 10px 0 0 rgba(51, 51, 51, 0.6), 20px 0 0 rgba(51, 51, 51, 1);
+    }
+    75% {
+        background-color: rgba(51, 51, 51, 1);
+        box-shadow: 10px 0 0 rgba(51, 51, 51, 0.6), 20px 0 0 rgba(51, 51, 51, 0.6);
+    }
+}
+
+@keyframes clock--hand {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes coffee {
+    from,
+    to {
+        box-shadow: 6px 0 0 #333, 6px -5px 0 #333, 12px 0 0 #333;
+    }
+    50% {
+        height: 0;
     }
 }

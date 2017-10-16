@@ -20,38 +20,36 @@
         height: 20px;
         position: relative;
         width: 60px;
+        &:before,
         &:after {
-            background-color: #333;
-            border: 1px solid #333;
             content: ' ';
             display: block;
+        }
+        &:before,
+        .battery--capacity {
+            background-color: #333;
+            height: 100%;
+            width: 100%;
+        }
+        &:after,
+        .battery--electrode {
+            background-color: #333;
+            border: 1px solid #333;
             height: 8px;
             right: -6px;
             position: absolute;
             top: 5px;
             width: 4px;
         }
-        .battery--capacity {
-            background-color: #333;
-            height: 100%;
-            width: 100%;
-        }
-        .battery--electrode {
-            background-color: #333;
-            border: 1px solid #333;
-            height: 8px;
-            right: -5px;
-            position: absolute;
-            top: 5px;
-            width: 3px;
-        }
     }
     .location {
         height: 30px;
         position: relative;
         width: 30px;
-        .location--icon {
+        &:before {
             border: 2px solid #333;
+            content: '';
+            display: block;
             height: 20px;
             position: absolute;
             top: 0;
@@ -76,8 +74,10 @@
         height: $size;
         position: relative;
         width: $size;
-        .cube--loading {
+        &:before {
             background-color: #333;
+            content: '';
+            display: block;
             height: 100%;
             margin-top: 0;
             width: 100%;
@@ -98,49 +98,154 @@
         background-color: #333;
         font-size: 0;
         height: 20px;
+        left: 30px;
         overflow: visible;
         position: relative;
         width: 100px;
-    }
-    .rectangle--wrap {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100px;
-    }
-    .rectangle--wrap__rect {
-        background-color: #333;
-        display: inline-block;
-        height: 20px;
-        margin-right: 2px;
-        width: 8px;
+        &:after {
+            background-color: #333;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin-right: 2px;
+            width: 8px;
+        }
     }
     div.rectangle {
         margin: 0;
     }
-    .progressBar {
-        background-color: #333;
-        font-size: 0;
-        height: 20px;
-        overflow: visible;
+    .ball {
+        $size: 30px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        height: $size;
         position: relative;
-        width: 100px;
+        width: $size;
+        &:after {
+            $size: 6px;
+            background-color: #333;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: $size;
+            left: 11px;
+            position: absolute;
+            top: 0;
+            width: $size;
+        }
     }
-    .progressBar--wrap {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100px;
+    .dashboard {
+        $size: 30px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        height: $size;
+        position: relative;
+        width: $size;
+        &:after {
+            background-color: #333;
+            border-radius: 0 0 20px 20px;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 9px;
+            position: absolute;
+            width: 100%;
+        }
+        &:before {
+            background-color: #333;
+            content: '';
+            display: block;
+            height: 13px;
+            left: 12px;
+            position: absolute;
+            top: 5px;
+            transform-origin: left bottom;
+            width: 2px;
+        }
     }
-    .progressBar--wrap__rect {
+    .circle {
+        font-size: 0;
+        width: 30px;
+        &:after {
+            $size: 10px;
+            background-color: rgba(51, 51, 51, 0.6);
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: $size;
+            width: $size;
+        }
+    }
+    div.circle {
+        margin-top: 10px;
+    }
+    .threeCircle {
+        $size: 6px;
         background-color: #333;
-        display: inline-block;
-        height: 20px;
-        margin-right: 2px;
-        width: 8px;
+        border-radius: 50%;
+        height: $size;
+        left: -12px;
+        position: relative;
+        top: 10px;
+        width: $size;
     }
-    div.progressBar {
-        margin: 0;
+    .clock {
+        $size: 30px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        height: $size;
+        position: relative;
+        width: $size;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            left: 12px;
+            position: absolute;
+            transform-origin: center bottom;
+        }
+        &:before {
+            background-color: #333;
+            height: 7px;
+            top: 7px;
+            width: 2px;
+        }
+        &:after {
+            background-color: #333;
+            height: 11px;
+            top: 3px;
+            width: 2px;
+        }
+    }
+    .coffee {
+        border: 1px solid #333;
+        border-radius: 0 0 6px 6px;
+        height: 24px;
+        position: relative;
+        top: 5px;
+        width: 23px;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        &:before {
+            background-color: #333;
+            height: 5px;
+            left: 4px;
+            top: -8px;
+            width: 1px;
+        }
+        &:after {
+            border: 1px solid #333;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            height: 14px;
+            left: 21px;
+            top: 0;
+            width: 9px;
+        }
     }
 }
 
@@ -149,15 +254,15 @@
         border-radius: 3px;
     }
     .location:after {
-        border-radius: 100%;
+        border-radius: 50%;
     }
-    .location--icon {
+    .location:before {
         border-radius: 10px 10px 10px 0;
     }
 }
 
 .csstransforms .page__loading {
-    .location--icon {
+    .location:before {
         transform: rotate(-45deg)
     }
 }
@@ -166,25 +271,46 @@
 /* 经测试，css-animation只支持到IE9 */
 
 .cssanimations .page__loading {
-    .battery--capacity {
+    .battery:before {
         animation: battery--capacity__charging 5s infinite steps(100, end);
     }
-    .location--icon {
-        animation: location--icon__beating 1s infinite;
+    .location:before {
+        animation: location__position 1s infinite;
     }
-    .cube--loading {
-        animation: cube__loading 10s infinite;
+    .cube:before {
+        animation: cube 10s infinite;
     }
     .cube:after {
-        animation: cube--small__loading 2s infinite;
+        animation: cube__position 2s infinite;
     }
     .rectangle {
-        animation: rectangle__loading 2s infinite;
+        animation: rectangle 2s linear infinite;
     }
-    .rectangle--wrap {
-        animation: rectangle--wrap__loading 2s infinite;
+    .rectangle:after {
+        animation: rectangle__loading 2s linear infinite;
     }
-    .progressBar {
-        animation: progressBar__loading 2s infinite;
+    .ball {
+        animation: ball__transform 2s infinite;
+    }
+    .dashboard:before {
+        animation: dashboard--hand 3s infinite;
+    }
+    .circle {
+        animation: circle__rotate 2s infinite;
+        &:after {
+            animation: circle__size 2s infinite;
+        }
+    }
+    .threeCircle {
+        animation: threeCircle 2s linear infinite alternate;
+    }
+    .clock:before {
+        animation: clock--hand 5s linear infinite;
+    }
+    .clock:after {
+        animation: clock--hand 2s linear infinite;
+    }
+    .coffee:before {
+        animation: coffee 2s infinite;
     }
 }
