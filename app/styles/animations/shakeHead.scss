@@ -1,0 +1,127 @@
+@keyframes face__eyebrow {
+    from {
+        top: -35px;
+    }
+    80% {
+        top: -35px;
+    }
+    to {
+        top: -45px;
+    }
+}
+
+@keyframes eye--grow {
+    from {
+        transform: scale(0)
+    }
+    60% {
+        transform: scale(1.15)
+    }
+    80% {
+        transform: scale(0.95)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes eye--blink {
+    from,
+    to {
+        transform: scaleY(1) translateY(0px)
+    }
+    45%,
+    55% {
+        transform: scaleY(1) translateY(0px)
+    }
+    50% {
+        transform: scaleY(0.1)
+    }
+}
+
+@keyframes head--shake {
+    from {
+        transform: rotate(0)
+    }
+    33% {
+        transform: rotate(5deg)
+    }
+    66% {
+        transform: rotate(-5deg)
+    }
+    to {
+        transform: rotate(0)
+    }
+}
+
+@keyframes music__note {
+    from {
+        left: -35px;
+        opacity: 0;
+        transform: rotate(-30deg);
+        top: 300px;
+    }
+    25% {
+        left: -50px;
+        opacity: .8;
+        transform: rotate(30deg);
+        top: 230px;
+    }
+    50% {
+        left: -30px;
+        opacity: 1;
+        transform: rotate(-20deg);
+        top: 180px;
+    }
+    75% {
+        left: -55px;
+        opacity: .8;
+        transform: rotate(20deg);
+        top: 130px;
+    }
+    to {
+        left: -35px;
+        opacity: 0;
+        transform: rotate(-20deg);
+        top: 70px;
+    }
+}
+
+@keyframes music__note--right {
+    from {
+        left: 380px;
+        opacity: 0;
+        transform: rotate(-10deg);
+        top: 240px;
+    }
+    10% {
+        left: 350px;
+        opacity: .4;
+        transform: rotate(10deg);
+        top: 200px;
+    }
+    25% {
+        left: 390px;
+        opacity: .5;
+        transform: rotate(-20deg);
+        top: 130px;
+    }
+    50% {
+        left: 340px;
+        opacity: 1;
+        transform: rotate(20deg);
+        top: 90px;
+    }
+    75% {
+        left: 400px;
+        opacity: .5;
+        transform: rotate(-10deg);
+        top: 40px;
+    }
+    to {
+        left: 300px;
+        opacity: 0;
+        transform: rotate(10deg);
+        top: 0px;
+    }
+}

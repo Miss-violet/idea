@@ -1,0 +1,275 @@
+/* 引入动画 */
+
+@import './animations/shakeHead.scss';
+
+/* 引入动画 end */
+
+.man {
+    margin-left: 50px;
+    margin-top: 50px;
+    position: relative;
+    width: 400px;
+}
+
+.bg {
+    $size: 400px;
+    background-color: #95b3bf;
+    height: $size;
+    width: $size;
+    overflow: hidden;
+}
+
+.bg--dark {
+    background-color: rgba(0, 0, 0, .2);
+    height: 400px;
+    margin-left: -34px;
+    margin-top: -135px;
+    width: 200px;
+}
+
+.bg--light {
+    background-color: rgba(255, 255, 255, .2);
+    height: 438px;
+    margin-left: 194px;
+    position: absolute;
+    top: 140px;
+    width: 300px;
+}
+
+.head {
+    background-color: #ffe4be;
+    height: 270px;
+    margin-left: -100px;
+    left: 50%;
+    position: absolute;
+    top: -12px;
+    width: 200px;
+    z-index: 1;
+    .head__hair {
+        background-color: #e7ab57;
+        height: 150px;
+        margin-left: -12px;
+        position: relative;
+        width: 224px;
+        &:before {
+            background-color: #e7ab57;
+            content: '';
+            display: block;
+            margin: 0 auto;
+            height: 30px;
+            position: relative;
+            top: -16px;
+            width: 130px;
+        }
+        &:after {
+            background-color: #e7ab57;
+            content: '';
+            display: block;
+            margin: 0 auto;
+            height: 40px;
+            position: relative;
+            top: 15px;
+            width: 56px;
+            z-index: 1;
+        }
+        .face__ear {
+            background-color: #ffe4be;
+            bottom: 0;
+            height: 26px;
+            position: absolute;
+            width: 12px;
+        }
+        .face__ear--right {
+            right: 0;
+        }
+    }
+    .head__face {
+        background-color: #ffe4be;
+        height: 130px;
+        left: 8px;
+        position: absolute;
+        top: 56px;
+        width: 184px;
+        .face__shadow {
+            background-color: #d19043;
+            height: 250px;
+            left: -8px;
+            opacity: .2;
+            position: absolute;
+            top: -36px;
+            width: 100px;
+            z-index: 1;
+        }
+        .face__nose {
+            background-color: #ffe4be;
+            height: 46px;
+            left: 70px;
+            position: absolute;
+            top: 75px;
+            width: 40px;
+            z-index: 1;
+        }
+        .face__mouth {
+            background-color: #fff;
+            height: 40px;
+            left: 50px;
+            position: absolute;
+            top: 150px;
+            width: 80px;
+        }
+    }
+    .face__eyeshadow {
+        background-color: rgba(234, 192, 154, .5);
+        content: '';
+        display: block;
+        height: 14px;
+        left: 31px;
+        position: absolute;
+        top: 70px;
+        width: 26px;
+        z-index: 1;
+        .face__eyebrow {
+            background-color: #e7ab57;
+            height: 10px;
+            left: -5px;
+            position: absolute;
+            top: -35px;
+            width: 40px;
+        }
+        .face__eye {
+            background-color: #334c68;
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            top: -18px;
+            width: 18px;
+            z-index: 2;
+        }
+    }
+    .face__eyeshadow--right {
+        left: 121px;
+    }
+}
+
+.body {
+    background-color: #222;
+    height: 300px;
+    left: 50%;
+    margin-left: -140px;
+    position: relative;
+    top: 188px;
+    width: 280px;
+    z-index: 0;
+    .body__clothes {
+        color: #fff;
+        font-size: 56px;
+        font-weight: bold;
+        position: relative;
+        text-align: center;
+        top: 90px;
+        .body__clothes--love {
+            color: #ef4136;
+            font-size: 42px;
+            padding: 0 5px;
+        }
+    }
+}
+
+.borderradius .page__shakeHead {
+    .bg {
+        border-radius: 100%;
+    }
+    .head {
+        border-radius: 50px;
+        transform-origin: 50% bottom;
+        .head__hair {
+            border-radius: 50px 50px 15px 15px;
+            &:before {
+                border-top-right-radius: 70px;
+            }
+            &:after {
+                border-bottom-left-radius: 26px;
+            }
+            .face__ear {
+                border-bottom-left-radius: 20px;
+            }
+            .face__ear--right {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 20px;
+            }
+        }
+        .head__face {
+            border-radius: 50px 50px 0 0;
+            .face__shadow {
+                border-radius: 50px;
+            }
+            .face__nose {
+                border-top-left-radius: 26px;
+            }
+            .face__mouth {
+                border-radius: 0 0 50px 50px;
+            }
+        }
+        .face__eyeshadow {
+            border-radius: 0 0 14px 14px;
+            .face__eye {
+                border-radius: 20px;
+                transform-origin: bottom;
+            }
+        }
+    }
+    .body {
+        border-radius: 120px;
+    }
+}
+
+.music__note {
+    bottom: -40px;
+    color: #e7ab57;
+    font-size: 140px;
+    left: -40px;
+    opacity: 0;
+    position: absolute;
+    top: 320px;
+}
+
+.music__note--right {
+    top: 240px;
+    left: 380px;
+}
+
+.csstransforms .page__shakeHead {
+    .bg--dark {
+        transform: rotate(-45deg)
+    }
+    .bg--light {
+        transform: rotate(45deg)
+    }
+    .face__eyeshadow--right .face__eyebrow {
+        transform: rotate(10deg);
+    }
+    .music__note {
+        transform: rotate(-7deg);
+    }
+    .music__note--right {
+        transform: rotate(8deg)
+    }
+}
+
+.cssanimations .page__shakeHead {
+    .face__eyeshadow--right .face__eyebrow {
+        animation: face__eyebrow 2s 6.6s infinite alternate;
+    }
+    .face__eye {
+        animation: eye--grow 0.8s 1s 1 ease, eye--blink 4s 4.4s infinite linear;
+    }
+    .head {
+        animation: head--shake 1s 4s infinite;
+    }
+    .music__note {
+        animation: music__note 5s 0.2s infinite;
+    }
+    .music__note--right {
+        animation: music__note--right 6s 1s infinite;
+    }
+}
